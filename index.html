@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho sobre Redes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: #f1f1f1;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .content {
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+      padding: 20px;
+      margin-top: -1px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explorando o Mundo das Redes: Modelos e Tipos de Ligação</h1>
+
+
+  <p>As redes de computadores desempenham um papel vital na sociedade contemporânea, sendo indispensáveis para uma gama diversificada de atividades que vão desde a comunicação instantânea até o compartilhamento global de recursos. Ter uma compreensão aprofundada dos diversos modelos de rede e tipos de conexão torna-se crucial não apenas para o desenvolvimento, mas também para a manutenção de sistemas que se destacam pela eficiência, confiabilidade e segurança.</p>
+
+  <ul class="tabs">
+    <li class="tab" onclick="showContent('modelo')">Modelos de Rede</li>
+    <li class="tab" onclick="showContent('tipos')">Tipos de Rede</li>
+    <li class="tab" onclick="showContent('ligacao')">Tipos de Ligação</li>
+  </ul>
+
+  <div id="modelo" class="content">
+    <h2>Modelos de Rede</h2>
+    <p>Os modelos de rede são estruturas que definem como os dispositivos em uma rede se comunicam. Alguns modelos comuns incluem:</p>
+    <ul>
+      <li><strong>Cliente-Servidor:</strong> Neste modelo, os dispositivos são divididos em dois papéis distintos - clientes, que solicitam serviços, e servidores, que fornecem serviços.</li>
+      <li><strong>Ponto a Ponto:</strong> Cada dispositivo está diretamente conectado a outro, permitindo comunicação direta entre eles.</li>
+      <li><strong>Rede em Anel:</strong> Os dispositivos são conectados em um formato de anel, onde cada dispositivo está conectado apenas aos seus vizinhos imediatos.</li>
+    </ul>
+  </div>
+
+  <div id="tipos" class="content" style="display: none;">
+    <h2>Tipos de Rede</h2>
+    <p>Diferentes tipos de rede incluem:</p>
+    <ul>
+      <li><strong>LAN (Rede Local):</strong> Cobrem uma área geográfica pequena, como um escritório ou uma casa.</li>
+      <li><strong>WAN (Rede de Área Ampla):</strong> Abrangem grandes áreas geográficas, como cidades, países ou até mesmo globalmente (por exemplo, a internet).</li>
+      <li><strong>MAN (Rede de Área Metropolitana):</strong> Compreendem uma área metropolitana, como uma cidade grande.</li>
+      <li><strong>PAN (Rede Pessoal):</strong> São redes pessoais, geralmente usadas para conectar dispositivos pessoais, como smartphones e laptops.</li>
+    </ul>
+  </div>
+
+  <div id="ligacao" class="content" style="display: none;">
+    <h2>Tipos de Ligação</h2>
+    <p>Existem várias formas de ligação em redes, incluindo:</p>
+    <ul>
+      <li><strong>Fibra Óptica:</strong> Utiliza pulsos de luz para transmitir dados a velocidades extremamente altas, oferecendo alta largura de banda e resistência a interferências.</li>
+      <li><strong>Cabos de Cobre:</strong> Ainda amplamente utilizados, esses cabos suportam comunicações em redes locais e são comuns em conexões de banda larga.</li>
+      <li><strong>Redes Sem Fio (Wi-Fi):</strong> Oferecem flexibilidade, permitindo a conexão de dispositivos sem a necessidade de cabos físicos.</li>
+      <li><strong>Redes Celulares:</strong> Utilizam torres de transmissão para fornecer conectividade sem fio em escala global, permitindo a comunicação móvel.</li>
+    </ul>
+  </div>
+
+  <script>
+    function showContent(tabId) {
+      const tabs = ['modelo', 'tipos', 'ligacao'];
+      tabs.forEach(tab => {
+        const content = document.getElementById(tab);
+        const tabElement = document.getElementById(tab);
+        
+        if (tab === tabId) {
+          content.style.display = 'block';
+          tabElement.style.backgroundColor = '#ddd';
+        } else {
+          content.style.display = 'none';
+          tabElement.style.backgroundColor = '#f1f1f1';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
