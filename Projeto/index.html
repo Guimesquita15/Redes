@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho sobre Redes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: #f1f1f1;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .content {
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+      padding: 20px;
+      margin-top: -1px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explorando o Mundo das Redes: Modelos e Tipos de Ligação</h1>
+
+
+  <p><h4>As redes de computadores desempenham um papel vital na sociedade contemporânea, sendo indispensáveis para uma gama diversificada de atividades que vão desde a comunicação instantânea até o compartilhamento global de recursos. Ter uma compreensão aprofundada dos diversos modelos de rede e tipos de conexão torna-se crucial não apenas para o desenvolvimento, mas também para a manutenção de sistemas que se destacam pela eficiência, confiabilidade e segurança.</h4></p>
+
+  <ul class="tabs">
+    <li class="tab" onclick="showContent('modelo')">Modelos de Rede</li>
+    <li class="tab" onclick="showContent('tipos')">Tipos de Rede</li>
+    <li class="tab" onclick="showContent('ligacao')">Tipos de Ligação</li>
+  </ul>
+
+  <div id="modelo" class="content">
+    <h2>Modelos de Rede</h2>
+    <p>Os modelos de rede são estruturas que definem como os dispositivos em uma rede se comunicam. Alguns modelos comuns incluem:</p>
+    <ul>
+      <li><strong>Modelos de Rede de Computadores:</strong> <br><strong>Definição:</strong> Esses modelos referem-se a estruturas conceituais que ajudam a entender e projetar redes de computadores. <br>
+        <strong>Exemplo:</strong> O modelo OSI (Open Systems Interconnection) e o modelo TCP/IP são dois modelos amplamente utilizados. O modelo OSI divide as funcionalidades de uma rede em sete camadas, enquanto o modelo TCP/IP tem quatro camadas. Esses modelos fornecem um framework para entender como os diferentes protocolos e serviços de rede interagem.</li>
+      
+    </ul>
+  </div>
+
+  <div id="tipos" class="content" style="display: none;">
+    <h2>Tipos de Rede</h2>
+    <p>Diferentes tipos de rede incluem:</p>
+    <ul>
+      <li><strong>LAN (Rede Local):</strong> Cobrem uma área geográfica pequena, como um escritório ou uma casa.</li>
+      <li><strong>WAN (Rede de Área Ampla):</strong> Abrangem grandes áreas geográficas, como cidades, países ou até mesmo globalmente (por exemplo, a internet).</li>
+      <li><strong>MAN (Rede de Área Metropolitana):</strong> Compreendem uma área metropolitana, como uma cidade grande.</li>
+      <li><strong>PAN (Rede Pessoal):</strong> São redes pessoais, geralmente usadas para conectar dispositivos pessoais, como smartphones e laptops.</li>
+      <li><strong>VPN (Virtual Private Network):</strong>Segurança online via internet. Privacidade, acesso remoto seguro e superação de restrições geográficas. </li>
+      <li><strong>CAN (Controller Area Network):</strong> Uma rede utilizada principalmente em automóveis e sistemas industriais para permitir a comunicação entre dispositivos controladores. </li>
+      <li><strong>SAN (Storage Area Network): </strong>  Uma rede dedicada à transferência de dados entre servidores e sistemas de armazenamento, otimizando o desempenho de armazenamento em massa.</li>
+      <li><strong>Wi-Fi:</strong> Uma tecnologia de rede sem fio que permite a conexão de dispositivos à internet e entre si em uma determinada área.</li>
+
+    </ul>
+  </div>
+
+  <div id="ligacao" class="content" style="display: none;">
+    <h2>Tipos de Ligação</h2>
+    <p>Existem várias formas de ligação em redes, incluindo:</p>
+    <ul>
+      <li><strong>Rede em Estrela:</strong> <br>-Todos os dispositivos estão conectados a um ponto central (hub ou switch). <br>
+        -A falha de um dispositivo não afeta diretamente os outros. <br>
+        -Utilizada comumente em redes locais (LANs).</li>
+      <li><strong>Rede em Barramento:</strong> <br> -Todos os dispositivos compartilham o mesmo canal de comunicação (o barramento). <br>
+        -Menos comum hoje em dia devido às limitações de desempenho e segurança.</li>
+      <li><strong>Rede em Anel:</strong> <br>-Cada dispositivo é conectado ao menos dois outros, formando um circuito fechado. <br>
+        -Os dados circulam em uma única direção. <br>
+        -Menos utilizado atualmente devido à complexidade e vulnerabilidade. </li>
+      <li><strong>Rede em Malha (Mesh):</strong> <br>-Cada dispositivo está conectado a todos os outros dispositivos na rede. <br>
+        -Oferece redundância e confiabilidade. <br>
+        -Usada em ambientes críticos onde a confiabilidade é crucial.</li>
+      <li><strong>Rede em Árvore:</strong> <br>-Uma combinação de topologias de estrela conectadas em um barramento central. <br>
+        -Pode ser uma extensão de redes em estrela para formar uma estrutura hierárquica. </li>
+        <img src="tipologia de redes.png" alt="representação dos tipos de ligação" width="300" height="200">
+
+    </ul>
+  </div>
+
+  <script>
+    function showContent(tabId) {
+      const tabs = ['modelo', 'tipos', 'ligacao'];
+      tabs.forEach(tab => {
+        const content = document.getElementById(tab);
+        const tabElement = document.getElementById(tab);
+        
+        if (tab === tabId) {
+          content.style.display = 'block';
+          tabElement.style.backgroundColor = '#ddd';
+        } else {
+          content.style.display = 'none';
+          tabElement.style.backgroundColor = '#f1f1f1';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
